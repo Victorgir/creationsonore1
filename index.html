@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Création sonore</title>
+    <title>Créations sonores</title>
     <style>
       * {
         box-sizing: border-box;
       }
 
-      /* Déclaration de la webfont DejaVu Serif Book */
+      /* Webfont DejaVu Serif (fichier DejaVuSerif.ttf à la racine du dépôt) */
       @font-face {
         font-family: "DejaVuSerifWeb";
         src: url("DejaVuSerif.ttf") format("truetype");
@@ -35,27 +35,44 @@
         text-align: center;
       }
 
-      audio {
-        width: 100%;
+      h1 {
+        margin-bottom: 2rem;
+        font-family: "DejaVuSerifWeb", serif;
+        font-size: 2rem;
+        color: black;
       }
 
-      .titre {
-        margin-top: 1rem;
-        font-size: 1.4rem;
-        color: black;
-        font-family: "DejaVuSerifWeb", serif; /* Utilise la webfont */
+      .liste {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .item {
+        display: block;
+        padding: 1rem 1.5rem;
+        border-radius: 999px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        font-family: "DejaVuSerifWeb", serif;
+        font-size: 1.1rem;
+      }
+
+      .item:active {
+        transform: scale(0.98);
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <audio controls>
-        <source src="creationsonore1.mp3" type="audio/mpeg" />
-        Votre navigateur ne supporte pas l'élément audio.
-      </audio>
+      <h1>Créations sonores</h1>
 
-      <div class="titre">Création sonore numéro 1</div>
+      <div class="liste">
+        <a class="item" href="creation1.html">Création sonore n°1</a>
+        <a class="item" href="creation2.html">Création sonore n°2</a>
+        <a class="item" href="creation3.html">Création sonore n°3</a>
+      </div>
     </div>
   </body>
 </html>
-
